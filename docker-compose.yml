@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  myrabbitmq:
+    image: rabbitmq:3-management
+    container_name: "myrabbitmq"
+    ports: 
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      CONFIG_FILE_PATH: /etc/rabbitmq/rabbitmq-env.conf
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+    networks:
+      - rabbitmq_nodejs
+
+networks:
+  rabbitmq_nodejs:
+    driver: bridge
