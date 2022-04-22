@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "publisher": "node publisher.js",
-    "consumer": "node consumer.js"
+    "consumer": "node consumer.js",
+    "newTask": "node new_task.js",
+    "worker": " node worker.js",
+    "emit": " node emit_log.js",
+    "emit_direct": " node emit_log_direct.js",
+    "receive": " node receive_logs.js",
+    "receive_direct": " node receive_direct_log.js"
   },
   "keywords": [],
   "author": "",
